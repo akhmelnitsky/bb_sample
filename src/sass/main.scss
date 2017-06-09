@@ -1,0 +1,231 @@
+@import "components/bootstrap-table";
+@import "components/bootstrap-datetimepicker";
+@import "components/bootstrap-daterangepicker";
+@import "components/bootstrap-calendar";
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+
+.header {
+  /*visibility: hidden;*/
+}
+.breadcrumb {
+  display: none;
+}
+
+input[required], textarea[required], .client-identification #middle-name {
+  background: rgba(245, 245, 116, 0.63);
+}
+/* Custom page footer */
+/*.footer {*/
+/*padding-top: 19px;*/
+/*color: #777;*/
+/*border-top: 1px solid #e5e5e5;*/
+/*}*/
+
+/* Customize container */
+/*@media (min-width: 768px) {*/
+/*.container {*/
+/*max-width: 730px;*/
+/*}*/
+/*}*/
+/*.container-narrow > hr {*/
+/*margin: 30px 0;*/
+/*}*/
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.nav-tabs {
+  margin-bottom: 0;
+}
+
+.footer-row {
+  margin-top: 20px;
+}
+
+.form-row {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+form {
+  input.error {
+    border: 4px solid #e64343;
+  }
+  label.error {
+    color: #e64343;
+  }
+}
+
+
+
+.sp-params-table tbody tr > td:nth-child(1)  {
+  vertical-align: middle;
+}
+.sp-params-table .form-group {
+  padding-left: 0;
+}
+
+body.with-footer {
+  margin-bottom: 60px;
+}
+
+
+.footer-content {
+  margin-top: 35px;
+}
+
+.btn-default {
+  background-color: #485563;
+}
+
+.btn-default:hover {
+  background-color: #3b4754;
+}
+
+.client-document-modal-without-choose .client-select-btn {
+  display: none;
+}
+
+#search_client .bs-checkbox, #search_result_providers .bs-checkbox {
+  display: none;
+}
+
+.form-control {
+  font-weight: normal;
+}
+
+
+
+/* Small padding, margin*/
+/*
+.row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.form-group, .panel {
+  margin-bottom: 5px;
+}
+
+*/
+
+
+/* FIX bug with bootstrap-table and fixed header (duplicate select options) */
+#history .fixed-table-container {
+  margin-top: 80px;
+}
+#search_result_history thead {
+  display: block;
+  position: absolute;
+  width: calc(100% - 17px);
+  margin-top: -75px;
+}
+#search_result_history tbody {
+  display: block;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+#search_result_history .bootstrap-table .table thead > tr > th {
+  padding: 0 1px;
+  margin: 0;
+  border: none;
+}
+#search_result_history .fixed-table-container tbody td .th-inner,
+#search_result_history .fixed-table-container thead th .th-inner {
+  padding: 8px 1px;
+}
+#search_result_history .filter-control {
+  margin: 0;
+}
+#search_result_history .bootstrap-table .table:not(.table-condensed) > tbody > tr > td {
+  padding: 8px 1px;
+  border: none;
+}
+#search_result_history .fixed-table-container .bs-checkbox .th-inner {
+  padding: 0;
+}
+
+.client-identification .fixed-table-body {
+  height: auto;
+}
+
+#search_result_history thead tr th:nth-child(1), #search_result_history tbody tr td:nth-child(1) { width: 5% !important;}
+#search_result_history thead tr th:nth-child(2), #search_result_history tbody tr td:nth-child(2) { width: 8% !important;}
+#search_result_history thead tr th:nth-child(3), #search_result_history tbody tr td:nth-child(3) { width: 10% !important;}
+#search_result_history thead tr th:nth-child(4), #search_result_history tbody tr td:nth-child(4) { width: 10% !important;}
+#search_result_history thead tr th:nth-child(5), #search_result_history tbody tr td:nth-child(5) { width: 26% !important;}
+#search_result_history thead tr th:nth-child(6), #search_result_history tbody tr td:nth-child(6) { width: 20% !important;}
+#search_result_history thead tr th:nth-child(7), #search_result_history tbody tr td:nth-child(7) { width: 10% !important;}
+#search_result_history thead tr th:nth-child(8), #search_result_history tbody tr td:nth-child(8) { width: 13% !important;}

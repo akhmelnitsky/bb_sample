@@ -1,0 +1,41 @@
+.daterangepicker {
+  background-color: #2b3e50 !important;
+}
+.daterangepicker * {
+  border-radius: 0 !important;
+}
+.daterangepicker:after {
+  border-bottom: 6px solid #2b3e50 !important;
+}
+.daterangepicker .input-mini {
+  background-color: #4e5d6c !important;
+  color: #fff !important;
+  border: 1px solid #4e5d6c !important;
+}
+.daterangepicker .input-mini.active {
+  border: 1px solid #747b82 !important;
+}
+.daterangepicker td.in-range {
+  background-color: rgba(43, 62, 80, 0.36) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+.daterangepicker .calendar-table {
+  border: 1px solid #4e5d6c !important;
+  background-color: #4e5d6c !important;
+}
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #768594 !important;
+}
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+  background-color: #df691a !important;
+}
+.daterangepicker td.active, .daterangepicker td.active:hover {
+  background-color: #df691a !important;
+}
+.daterangepicker .weekend {
+  color: #df691a;
+}
+

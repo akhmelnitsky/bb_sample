@@ -1,0 +1,10 @@
+{
+  "directory": "bower_components",
+  "nexusRegistry": "http://nexus.rooxintra.net/content/repositories/snapshots/",
+  "resolvers": [
+    "rx-bower-resolver"
+  ],
+   "scripts": {
+    "postinstall": "node ./node_modules/rx-bower-unjar/index.js"
+   }
+}
