@@ -1,2 +1,2 @@
 grunt start
-build_ci"# bb_sample" 
+build_ci

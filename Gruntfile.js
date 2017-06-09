@@ -290,7 +290,7 @@ module.exports = function (grunt) {
                 options:{
                     resInlinePrefix: '__MODULE_BASE_URL__/',
                     cssmin: true,
-                    uglify: true,
+                    uglify: false,
                     tag: ''
                 }
             }

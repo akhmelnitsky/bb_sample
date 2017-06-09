@@ -229,3 +229,16 @@ body.with-footer {
 #search_result_history thead tr th:nth-child(6), #search_result_history tbody tr td:nth-child(6) { width: 20% !important;}
 #search_result_history thead tr th:nth-child(7), #search_result_history tbody tr td:nth-child(7) { width: 10% !important;}
 #search_result_history thead tr th:nth-child(8), #search_result_history tbody tr td:nth-child(8) { width: 13% !important;}
+
+.fixed-table-container tbody tr td {
+  border: none;
+}
+
+.client-info-tooltip-text {
+  text-align: left;
+}
+
+.tooltip-overlay-text {
+  display: inline-block;
+  width: 100%;
+}
