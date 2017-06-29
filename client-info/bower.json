@@ -1,0 +1,8 @@
+{
+    "name": "client-info",
+    "version": "0.0.1",
+    "dependencies": {
+        "wrs-common-features": "http://technoserv:u2mv6Zp8@repo.rooxteam.com/customers/service/local/artifact/maven/content?r=roox.snapshots&g=com.rooxteam.wms&a=wrs-features&e=jar&v=2.3.18-SNAPSHOT",
+        "wrs-extra-features": "http://technoserv:u2mv6Zp8@repo.rooxteam.com/customers/service/local/artifact/maven/content?r=roox.snapshots&g=com.rooxteam.wms.plugins&a=roox-extra-features&e=jar&v=2.3.18-SNAPSHOT"
+    }
+}

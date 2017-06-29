@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+
+<script>
+    window.MODULE_ID = "__MODULE_ID__";
+    window.MODULE_BASE_URL = "__MODULE_BASE_URL__";
+</script>
+
+<script type="text/javascript" src="js/vendor/es/es5-shim.min.js"></script>
+<script type="text/javascript" src="js/vendor/es/es5-sham.min.js"></script>
+<script type="text/javascript" src="js/vendor/es/es6-shim.min.js"></script>
+<script type="text/javascript" src="js/vendor/es/es6-sham.min.js"></script>
+<script type="text/javascript" src="js/vendor/es/fix-ie10.js"></script>
+
+
+
+<div id="widget__MODULE_ID__" style="width: 100%; height: 100%; padding: 0; margin: 0;">
+</div>
+
+<!-- build:rxJSX js/dist.js -->
+<script src="js/main.js" type="text/jsx"></script>
+<!-- /build -->
+
+
+<script language="javascript" type="text/javascript">
+    gadgets.util.registerOnLoadHandler(function init() {
+        // com.rooxteam.widgets.ClientInfo__MODULE_ID__ = new com.rooxteam.widgets.ClientInfo(__MODULE_ID__);
+    }, __MODULE_ID__);
+</script>

@@ -1,0 +1,355 @@
+/**
+ * @author zhixin wen <wenzhixin2010@gmail.com>
+ * version: 1.11.1
+ * https://github.com/wenzhixin/bootstrap-table/
+ */
+
+/**
+ * @author zhixin wen <wenzhixin2010@gmail.com>
+ * version: 1.11.1
+ * https://github.com/wenzhixin/bootstrap-table/
+ */
+
+//colors
+$color_alto_approx: #dddddd;
+$color_hot_cinnamon_approx: #df691a;
+$white: #fff;
+$color-primary: #4e5d6c;
+//data-uris
+$data_uri_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAQAAADYWf5HAAAAkElEQVQoz7X QMQ5AQBCF4dWQSJxC5wwax1Cq1e7BAdxD5SL+Tq/QCM1oNiJidwox0355mXnG/DrEtIQ6azioNZQxI0ykPhTQIwhCR+BmBYtlK7kLJYwWCcJA9M4qdrZrd8pPjZWPtOqdRQy320YSV17OatFC4euts6z39GYMKRPCTKY9UnPQ6P+GtMRfGtPnBCiqhAeJPmkqAAAAAElFTkSuQmCC";
+$data_uri_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAZ0lEQVQ4y2NgGLKgquEuFxBPAGI2ahhWCsS/gDibUoO0gPgxEP8H4ttArEyuQYxAPBdqEAxPBImTY5gjEL9DM+wTENuQahAvEO9DMwiGdwAxOymGJQLxTyD+jgWDxCMZRsEoGAVoAADeemwtPcZI2wAAAABJRU5ErkJggg==";
+$data_uri_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAZUlEQVQ4y2NgGAWjYBSggaqGu5FA/BOIv2PBIPFEUgxjB+IdQPwfC94HxLykus4GiD+hGfQOiB3J8SojEE9EM2wuSJzcsFMG4ttQgx4DsRalkZENxL+AuJQaMcsGxBOAmGvopk8AVz1sLZgg0bsAAAAASUVORK5CYII= ";
+
+//@extend-elements
+//original selectors
+//.fixed-table-container thead th .th-inner, .fixed-table-container tbody td .th-inner
+%extend_1 {
+  padding: 8px;
+  line-height: 24px;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//original selectors
+//.fixed-table-toolbar .bs-bars, .fixed-table-toolbar .search, .fixed-table-toolbar .columns
+%extend_2 {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 34px;
+}
+
+//original selectors
+//.fixed-table-toolbar:after, .fixed-table-pagination:after
+%extend_3 {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+.bootstrap-table {
+  margin-bottom: 20px;
+  .table {
+    margin-bottom: 0 !important;
+    border-collapse: collapse !important;
+    border: none;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+
+    &.table-no-bordered {
+      > thead > tr > th {
+        border-right: 2px solid transparent;
+      }
+      > tbody > tr > td {
+        border-right: 2px solid transparent;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+    &:not(.table-condensed) {
+      padding: 8px;
+      > tbody > tr {
+        > th {
+          padding: 8px;
+        }
+        > td {
+          padding: 8px;
+        }
+      }
+      > tfoot > tr {
+        > th {
+          padding: 8px;
+        }
+        > td {
+          padding: 8px;
+        }
+      }
+      > thead > tr > td {
+        padding: 8px;
+      }
+    }
+    > thead > tr > th {
+      vertical-align: bottom;
+      border-color: transparent;
+    }
+    thead > tr > th {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .fixed-table-footer {
+    .table {
+      border-bottom: none;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 0;
+      padding: 0 !important;
+    }
+    tbody > tr > td {
+      padding: 0 !important;
+    }
+  }
+  .pull-right .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+}
+.fixed-table-container {
+  position: relative;
+  clear: both;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 0;
+  border: none;
+  &.table-no-bordered {
+    border: 1px solid transparent;
+  }
+  table {
+    width: 100%;
+  }
+  tbody {
+    td {
+      border-left: 1px solid $color_alto_approx;
+      .th-inner {
+        @extend %extend_1;
+      }
+      &:first-child {
+        border-left: none;
+      }
+    }
+    tr:first-child td {
+      border-top: none;
+    }
+    .selected td {
+      background-color: $color_hot_cinnamon_approx;
+    }
+  }
+  .bs-checkbox {
+    text-align: center;
+    .th-inner {
+      padding: 8px 0;
+    }
+  }
+  input[type="radio"] {
+    margin: 0 auto !important;
+  }
+  input[type="checkbox"] {
+    margin: 0 auto !important;
+  }
+  .no-records-found {
+    text-align: center;
+  }
+  thead th {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border-left: 1px solid $color_alto_approx;
+    &:focus {
+      outline: 0 solid transparent;
+    }
+    &:first-child {
+      border-left: none;
+      //Instead of the line below you could use @include border-top-left-radius($radius)
+      border-top-left-radius: 4px;
+    }
+    .th-inner {
+      @extend %extend_1;
+    }
+    .sortable {
+      cursor: pointer;
+      background-position: right;
+      background-repeat: no-repeat;
+      padding-right: 30px;
+    }
+    .both {
+      background-image: url($data_uri_0);
+    }
+    .asc {
+      background-image: url($data_uri_1);
+    }
+    .desc {
+      background-image: url($data_uri_2);
+    }
+  }
+  th.detail {
+    width: 30px;
+  }
+}
+.fixed-table-footer {
+  overflow: hidden;
+  border-top: 1px solid $color_alto_approx;
+}
+.fixed-table-header {
+  overflow: hidden;
+  margin-right: 0 !important;
+}
+.fixed-table-body {
+  overflow-x: auto;
+  overflow-y: auto;
+  height: 100%;
+  .card-view .title {
+    font-weight: bold;
+    display: inline-block;
+    min-width: 30%;
+    text-align: left !important;
+  }
+  thead th .th-inner {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+  }
+}
+.fixed-table-pagination {
+  .pagination-detail {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .pagination-info {
+    line-height: 34px;
+    margin-right: 5px;
+  }
+  .btn-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .page-list {
+    display: inline-block;
+  }
+  &:after {
+    @extend %extend_3;
+  }
+  div.pagination {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .pagination {
+      margin: 0;
+    }
+  }
+  .pagination a {
+    padding: 6px 12px;
+    line-height: 1.428571429;
+  }
+  .dropup .dropdown-menu {
+    margin-bottom: 0;
+  }
+  li.disabled a {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+.fixed-table-toolbar {
+
+  .columns-left {
+    margin-right: 5px;
+  }
+  .columns-right {
+    margin-left: 5px;
+  }
+  .columns {
+    @extend %extend_2;
+    label {
+      display: block;
+      padding: 3px 20px;
+      clear: both;
+      font-weight: normal;
+      line-height: 1.428571429;
+    }
+  }
+  .bs-bars {
+    @extend %extend_2;
+  }
+  .search {
+    display: none;
+    @extend %extend_2;
+  }
+  .dropdown-menu {
+    text-align: left;
+    max-height: 300px;
+    overflow: auto;
+  }
+  &:after {
+    @extend %extend_3;
+  }
+  .btn-group > .btn-group {
+    display: inline-block;
+    margin-left: -1px !important;
+    > .btn {
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 0;
+    }
+    &:first-child > .btn {
+      //Instead of the line below you could use @include border-top-left-radius($radius)
+      border-top-left-radius: 4px;
+      //Instead of the line below you could use @include border-bottom-left-radius($radius)
+      border-bottom-left-radius: 4px;
+    }
+    &:last-child > .btn {
+      //Instead of the line below you could use @include border-top-right-radius($radius)
+      border-top-right-radius: 4px;
+      //Instead of the line below you could use @include border-bottom-right-radius($radius)
+      border-bottom-right-radius: 4px;
+    }
+  }
+}
+.fixed-table-loading {
+  display: none;
+  position: absolute;
+  top: 42px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: $white;
+  text-align: center;
+}
+.table {
+  th {
+    vertical-align: middle;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+  }
+  td {
+    vertical-align: middle;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+  }
+}
+p.fixed-table-scroll-inner {
+  width: 100%;
+  height: 200px;
+}
+div.fixed-table-scroll-outer {
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+}
+
+
+// Custom classes for format field
+.field-sum {
+  min-width: 75px;
+}
