@@ -1,2 +1,0 @@
-grunt start
-build_ci
